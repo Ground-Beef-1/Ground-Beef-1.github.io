@@ -1,0 +1,20 @@
+
+table, tr, th, td{
+	border: 2px solid black;
+}
+body{background-color: #8684F5;}
+#Link1 {background-color: #74B0B3}
+#info {background-color: #747EB3}
+.checker {background-color: #F56970}
+.checker2 {background-color: #83F569}
+#thefestivity {
+	background-color: #8684F5;
+	
+	background-image: linear-gradient(90deg, #4bc249, #F83EE9, #A35811);
+}
+#beep {color: #F1C232;
+	font-size: 25px;
+	font-family: "Comic Sans MS";
+}
+#evil {background-color: #797B0A;}
+.hellscape{font-family: "Wingdings";}
