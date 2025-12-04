@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+<title>Who wants ice cream??</title>
+<script src=”../js/validate.js”></script>
+
+</head>
+<body>
+	<form action="https://httpbin.org/post" method="post">
+		What is your email address?
+		<br>
+		<input type="email" name="useremail" required>
+		<br><hr>
+		What is your phone number?
+		<br>
+		<input type="number" name="userphone" required>
+		<br><hr>
+		How many people will you bring with you to the party?
+		<br>
+		<input type="number" name="bodycount" required>
+		<br><hr>
+		What is your favorite flavor of ice cream?
+		<br>
+		<select id="icecream" name="icecream" size="4">
+			<option value="vanilla"> Vanilla</option>
+			<option value="Chocolatechip">Chocolate Chip
+			</option>
+			<option value="Strawberry">Strawberry</option>
+			<option value="Other">Other</option>
+		</select>
+		<br><hr>
+		Which toppings do you like?
+		<br>
+		<input type="checkbox" value=1 name="Sprinkles">
+
+		<select id="toppings" name="toppings" size="5">
+			<option type="checkbox" value="1">Sprinkles</option>
+			<option type="checkbox" value="1">Magic Shell</option>
+			<option type="checkbox" value="1">Chocolate Chips
+			</option>
+			<option type="checkbox" value="1">Gummy Bears</option>
+			<option type="checkbox" value="1">Other</option>
+		</select>
+		<br><hr>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
+
