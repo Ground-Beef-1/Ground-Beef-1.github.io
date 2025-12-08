@@ -21,27 +21,43 @@
 		<br><hr>
 		What is your favorite flavor of ice cream?
 		<br>
-		<select id="icecream" name="icecream" size="4">
-			<option value="vanilla"> Vanilla</option>
-			<option value="Chocolatechip">Chocolate Chip
-			</option>
-			<option value="Strawberry">Strawberry</option>
-			<option value="Other">Other</option>
-		</select>
+		<input type="radio" id="vanilla" name="flavor" 
+		value="vanilla">
+		<label for="vanilla">Vanilla</label>
+		<br>
+		<input type="radio" id="chocolatechip" name="flavor" 
+		value="chocolatechip">
+		<label for="chocolatechip">Chocolate Chip</label>
+		<br>
+		<input type="radio" id="strawberry" name="flavor" 
+		value="strawberry">
+		<label for="strawberry">Strawberry</label>
+		<br>
+		<input type="radio" id="other" name="flavor" 
+		value="other">
+		<label for="other">Other</label>
 		<br><hr>
 		Which toppings do you like?
 		<br>
 		<input type="checkbox" value=1 name="Sprinkles">
-
-		<select id="toppings" name="toppings" size="5">
-			<option type="checkbox" value="1">Sprinkles</option>
-			<option type="checkbox" value="1">Magic Shell</option>
-			<option type="checkbox" value="1">Chocolate Chips
-			</option>
-			<option type="checkbox" value="1">Gummy Bears</option>
-			<option type="checkbox" value="1">Other</option>
-		</select>
+		<label for="sprinkles">Sprinkles</label>
+		<br>
+		<input type="checkbox" value=1 name="Magicshell">
+		<label for="Magicshell">Magic Shell</label>
+		<br>
+		<input type="checkbox" value=1 name="Chocolatechips">
+		<label for="Chocolatechips">Chocolate Chips</label>
+		<br>
+		<input type="checkbox" value=1 name="Gummybears">
+		<label for="Gummybears">Gummy Bears</label>
+		<br>
+		<input type="checkbox" value=1 name="other">
+		<label for="other">Other</label>
 		<br><hr>
+		<label for="entertainment">What kind of entertainment should we
+			 have at the party?
+		<select id="entertainme" name="entertainment">
+			<option value="Balloonanimals">Balloon Animals
 		<button type="submit">Submit</button>
 	</form>
 </body>
