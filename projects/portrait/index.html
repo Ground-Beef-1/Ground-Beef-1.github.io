@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Portrait...?</title>
+<style>
+canvas{
+	border: black 1px solid;
+}
+</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="800">
+		</canvas>
+			<script>
+			//Magic
+		const canvas = document.getElementById("canvas");
+                const ctx = canvas.getContext("2d");
+			
+			//Face
+
+			//Face outline
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 6;
+			ctx.beginPath();
+			ctx.moveTo(510,340);
+			ctx.lineTo(510,340);
+			ctx.lineTo(510,497);
+			ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.arc(410.4,497.6,100,0,0.19444444*Math.PI);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.moveTo(493.7,552.9);
+			ctx.lineTo(493.7,552.9);
+			ctx.lineTo(432.5,620.25);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.arc(392.7,588.7,50,0.21666667*Math.PI,Math.PI/2);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.moveTo(393.7,639.7);
+			ctx.lineTo(393.7,639.7);
+			ctx.lineTo(319,639.7);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.arc(319,549.7,90,Math.PI/2,0.7333333*Math.PI);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.moveTo(259.2,616.96);
+			ctx.lineTo(259.2,616.96);
+			ctx.lineTo(192.55,530.32);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.arc(354,412,200,0.77777778*Math.PI,11*Math.PI/12);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.arc(453,357,300,0.93888889*Math.PI,7*Math.PI/6);
+                        ctx.stroke();
+
+			//Eye1
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.moveTo(208.1,393.53);
+			ctx.lineTo(208.1,393.53);
+			ctx.lineTo(252.58,373.31);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.arc(254,377.05,4,4*Math.PI/3,7*Math.PI/4);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.moveTo(255.91,373.54);
+			ctx.lineTo(255.91,373.54);
+			ctx.lineTo(299.36,399.09)
+                        ctx.stroke();
+			
+			//Eyeball and following corrections
+			ctx.strokeStyle = "black";
+			ctx.fillStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+			ctx.arc(254.2,395.2,30,0,2*Math.PI);
+			ctx.fill();
+
+			ctx.strokeStyle = "white";                              
+                        ctx.lineWidth = 9;                                      
+                        ctx.beginPath();                                        
+                        ctx.moveTo(204.1,388.53);
+			ctx.lineTo(204.1,388.53);
+			ctx.lineTo(265.5,361.4);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "white";
+                        ctx.lineWidth = 10;
+                        ctx.beginPath();
+			ctx.moveTo(255.91,366.54);
+			ctx.lineTo(255.91,366.54);
+			ctx.lineTo(299.36,392.09);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "white";
+                        ctx.lineWidth = 4;
+                        ctx.beginPath();
+			ctx.arc(254,374,4,4*Math.PI/3,7*Math.PI/4);
+                        ctx.stroke();
+
+			//back to the rest of the eye!
+			//4a
+			ctx.strokeStyle = "black";                              
+                        ctx.lineWidth = 1;                                      
+                        ctx.beginPath();                                        
+                        ctx.moveTo(215.9,385.16);
+			ctx.lineTo(215.9,385.16);
+			ctx.lineTo(251.67,368.9);
+                        ctx.stroke(); 
+			
+			//4b
+			ctx.strokeStyle = "black";                              
+                        ctx.lineWidth = 1;                                
+                        ctx.beginPath();                                        
+                        ctx.arc(254.8,378.4,10,17*Math.PI/12,19*Math.PI/12);
+                        ctx.stroke();  
+			
+			//5
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+			ctx.moveTo(258.8,369.23);
+			ctx.lineTo(258.8,369.23);
+			ctx.lineTo(292.8,389.29);
+                        ctx.stroke();
+
+			//6
+			ctx.strokeStyle = "black";                              
+                        ctx.lineWidth = 3;                                      
+                        ctx.beginPath(); 
+			ctx.moveTo(201.1,418.68);
+			ctx.lineTo(201.1,418.68);
+			ctx.lineTo(247,447.37);
+                        ctx.stroke();
+
+			//7
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.moveTo(248.35,448.12);
+			ctx.lineTo(248.35,448.12);
+			ctx.lineTo(287.7,430.23);
+                        ctx.stroke();
+
+			//8
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.arc(248.6,437.5,10,5*Math.PI/12,2*Math.PI/3);
+                        ctx.stroke();
+
+			//9
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+			ctx.moveTo(201.3,427.94);
+			ctx.lineTo(201.3,427.94);
+			ctx.lineTo(239.07,451.96);
+                        ctx.stroke();
+
+			//10
+			ctx.strokeStyle = "black";                              
+                        ctx.lineWidth = 1;                                      
+                        ctx.beginPath();
+			ctx.moveTo(250.43,454.18);
+			ctx.lineTo(250.43,453.18);
+			ctx.lineTo(287.1,436.5);
+                        ctx.stroke();
+
+			//11
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+			ctx.arc(245.6,433,20,5*Math.PI/12,0.59444444*Math.PI);
+                        ctx.stroke();
+
+			//12
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.moveTo(195,444);
+			ctx.lineTo(195,444);
+			ctx.lineTo(210.48,425.42);
+                        ctx.stroke();
+
+			//13
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.moveTo(236.7,469.4);
+			ctx.lineTo(236.7,469.4);
+			ctx.lineTo(244.58,444.36);
+                        ctx.stroke();
+
+			//14
+			ctx.strokeStyle = "black";                              
+                        ctx.lineWidth = 3;                                      
+                        ctx.beginPath();                                        
+                        ctx.moveTo(287.6,453.2);
+			ctx.lineTo(287.6,453.2);
+			ctx.lineTo(271.84,437.44);
+                        ctx.stroke();
+
+			//Mouth
+
+			//1
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+		ctx.arc(347,756.5,170,1.38888889*Math.PI,19*Math.PI/12);
+                        ctx.stroke();
+
+			//eye2
+
+			//1
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 3;
+			ctx.beginPath();
+			ctx.moveTo(390,401.5);
+			ctx.lineTo(390,401.5);
+			ctx.lineTo(433.36,383.44);
+			ctx.stroke();
+
+			//2
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.arc(435.4,392.2,9,17*Math.PI/12,5*Math.PI/3);
+                        ctx.stroke();
+			/* owo :3 -nameless */
+
+			//3
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.moveTo(438.28,383.67);
+                        ctx.lineTo(438.28,383.67);
+                        ctx.lineTo(477,404.05);
+                        ctx.stroke();
+
+			//4a - eyeball
+			ctx.strokeStyle = "blue";
+			ctx.fillStyle = "black";
+                        ctx.lineWidth = 1;                                      
+                        ctx.beginPath();
+			ctx.arc(431.8,403.4,28,0,2*Math.PI);
+                        //ctx.stroke();  
+			ctx.fill();
+
+			//4b - correction to eyeball
+			ctx.strokeStyle = "white";
+                        ctx.lineWidth = 9;
+                        ctx.beginPath();
+                        ctx.moveTo(390,395.5);
+                        ctx.lineTo(390,395.5);
+                        ctx.lineTo(433.36,377.44);
+                        ctx.stroke();
+
+			//4c - correction to eyeball
+			ctx.strokeStyle = "white";                              
+                        ctx.lineWidth = 9;                                      
+                        ctx.beginPath();                                        
+                        ctx.arc(435.4,386.2,9,17*Math.PI/12,5*Math.PI/3);       
+                        ctx.stroke();
+
+			//4d - correction to eyeball
+			ctx.strokeStyle = "white";
+                        ctx.lineWidth = 9;
+                        ctx.beginPath();
+                        ctx.moveTo(438.28,377.67);
+                        ctx.lineTo(438.28,377.67);
+                        ctx.lineTo(477,398.05);
+                        ctx.stroke();
+
+			//4e - teeny correction to eyeball
+			ctx.strokeStyle = "white";
+                        ctx.lineWidth = 2;
+                        ctx.beginPath();
+                        ctx.moveTo(390,390.5);
+                        ctx.lineTo(390,390.5);
+                        ctx.lineTo(433.36,372.44);
+                        ctx.stroke();
+
+			//5
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(402.04,393.7);
+                        ctx.lineTo(402.04,393.7);
+                        ctx.lineTo(428.85,382.04);
+                        ctx.stroke();
+
+			//6
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(438.85,380.97);
+                        ctx.lineTo(438.85,380.97);
+                        ctx.lineTo(467.87,396.25);
+                        ctx.stroke();
+
+			//7
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.arc(433.95,395.15,15,17*Math.PI/12,19*Math.PI/12);
+                        ctx.stroke();
+
+			//8
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 3;
+			ctx.beginPath();
+			ctx.moveTo(390.22,437.78);
+			ctx.lineTo(390.22,437.78);
+			ctx.lineTo(423.5,455.28);
+			ctx.stroke();
+
+			//9
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+	ctx.arc(428.9,441.3,15,0.35555556*Math.PI,0.61111111*Math.PI);
+                        ctx.stroke();
+
+			//10
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.moveTo(435.86,454.59);
+                        ctx.lineTo(435.86,454.59);
+                        ctx.lineTo(470.96,432.65);
+                        ctx.stroke();
+
+			//11
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(387.95,444.59);
+                        ctx.lineTo(387.95,444.59);
+                        ctx.lineTo(419.79,461.34);
+                        ctx.stroke();
+
+			//12
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+            ctx.arc(429,438.1,25,0.38888889*Math.PI,0.61111111*Math.PI);
+                        ctx.stroke();
+
+			//13
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(438.11,461.38);
+                        ctx.lineTo(438.11,461.38);
+                        ctx.lineTo(473.4,439.32);
+                        ctx.stroke();
+
+			//Brown part of hair (this is a hell of my own creation)
+			ctx.strokeStyle = "black";
+			ctx.fillStyle = "#59360b";
+			ctx.beginPath();
+			ctx.lineWidth = 6;
+			ctx.arc(281,114,60,Math.PI/4,13*Math.PI/12);
+			ctx.arc(387,233,100,5*Math.PI/4,7*Math.PI/4);
+			ctx.arc(512,118,70,Math.PI/12,0.77777778*Math.PI);
+		ctx.arc(433,151,150,1.96666667*Math.PI,0.22222222*Math.PI);
+			ctx.arc(428,345,150,7*Math.PI/4,2*Math.PI);
+			ctx.arc(725,367,150,2*Math.PI/3,13*Math.PI/12);
+			ctx.arc(625,401,100,5*Math.PI/12,2*Math.PI/3);
+			ctx.arc();
+			//ctx.fill();
+			ctx.stroke();
+
+			//Red part of hair (why did I do this to myself???
+			ctx.strokeStyle = "black";
+			ctx.fillStyle = "red";
+			ctx.lineWidth = 6;
+			ctx.beginPath();
+			ctx.arc(330,390,200,1.23333333*Math.PI,11*Math.PI/6);
+			ctx.arc(589,240,100,Math.PI/2,5*Math.PI/6);
+			ctx.arc(540,260,90,Math.PI/3,3*Math.PI/4);
+			ctx.arc(456,231,90,0.44444444*Math.PI,3*Math.PI/4);
+			ctx.arc(292,291,100,1.99444444*Math.PI,Math.PI/3);
+			ctx.arc(348,234,70,0.57222222*Math.PI,11*Math.PI/12);
+			ctx.arc(305,345,50,7*Math.PI/4,Math.PI/4);
+			ctx.arc(108,153,200,Math.PI/6,0.38888889*Math.PI);
+			ctx.arc(114,292,80,23*Math.PI/12,0.21666667*Math.PI);
+			ctx.arc(92,193,150,Math.PI/4,0.45555556*Math.PI);
+			ctx.arc(38,213,150,0.08888889*Math.PI,Math.PI/3);
+			ctx.fill();
+			ctx.stroke();
+			
+			//Corrections to red part of hair (AHHHHHHHHHHH)
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "white";
+			ctx.lineWidth = 1;
+			ctx.beginPath();
+			ctx.arc(37,212,150,Math.PI,Math.PI/3);
+			ctx.stroke();
+			ctx.fill();
+
+			ctx.fillStyle = "white";
+                        ctx.strokeStyle = "white";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+			ctx.moveTo(164.8,332.8);
+			ctx.lineTo(164.8,332.8);
+			ctx.lineTo(194.9,303.7);
+			ctx.lineTo(170.8,343.7);
+			ctx.stroke();
+			ctx.fill();
+
+			ctx.fillStyle = "white";
+                        ctx.strokeStyle = "white";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+		ctx.arc(346,236,70.1,0.57222222*Math.PI,0.888888889*Math.PI);
+			ctx.stroke();
+
+			ctx.fillStyle = "white";
+                        ctx.strokeStyle = "white";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.arc(304,345,48,5*Math.PI/3,Math.PI/3);
+			ctx.stroke();
+			ctx.fill();
+
+			ctx.fillStyle = "white";
+                        ctx.strokeStyle = "white";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.moveTo(330,305);
+			ctx.lineTo(330,305);
+			ctx.lineTo(336.5,374);
+			ctx.lineTo(294,290);
+			ctx.lineTo(330,305);
+			ctx.stroke();
+			ctx.fill();
+
+			ctx.fillStyle = "white";
+                        ctx.strokeStyle = "white";
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+			ctx.moveTo(294,290);
+			ctx.lineTo(298,290);
+			ctx.lineTo(290,280);
+			ctx.stroke();
+
+		//	ctx.fillStyle = "white";
+                  //      ctx.strokeStyle = "white";
+                    //    ctx.lineWidth = 1;
+                      //  ctx.beginPath();
+		//	ctx.arc(590,240,99,5*Math.PI/12,Math.PI);
+		//	ctx.stroke();
+		//	ctx.fill();
+
+			ctx.fillStyle = "red";
+                        ctx.strokeStyle = "red";
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+			ctx.arc(350,232,70,0.57222222*Math.PI,11*Math.PI/12);
+			ctx.stroke();
+			ctx.fill();
+
+
+
+			//Gotta put nose here
+
+			//1
+			 ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+           ctx.arc(219,456,130,1.80555556*Math.PI,0.21666667*Math.PI);
+                        ctx.stroke();
+
+			//2
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+			ctx.arc(323,538.7,3,7*Math.PI/12,13*Math.PI/12);
+                        ctx.stroke();
+
+			ctx.strokeStyle = "black";
+                        ctx.lineWidth = 6;
+                        ctx.beginPath();
+	ctx.arc(353,244,300,0.47222222*Math.PI,0.53333333*Math.PI);
+                        ctx.stroke();
+
+
+
+			</script>
+
+	</body>
+</html>
