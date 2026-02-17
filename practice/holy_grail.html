@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Holy Grail or whatever </title>
+<style>
+.grid {
+  display: grid;
+  height: 100vh;
+  gap: 10px;
+  grid:
+    'head  head  head  head  head' 1fr
+    'sidea  main main main sideb' 3fr
+    'foot  foot  foot  foot  foot' 1fr
+  /1fr  1fr  1fr  1fr  1fr;}
+  #head {
+	  grid-area: head;
+	  background-color: green;
+	  color: black;
+	  font-size: 70px;
+	  text-align: center;}
+#sidea {
+	grid-area: sidea;
+	background-color: green;
+          color: black;
+          font-size: 70px;
+          text-align: center;
+}
+#sideb {
+	grid-area: sideb;
+	background-color: green;
+          color: black;
+          font-size: 70px;
+          text-align: center;
+}
+#main {
+	grid-area: main;
+	background-color: green;
+          color: black;
+          font-size: 70px;
+          text-align: center;
+}
+#foot {
+	grid-area: foot;
+	background-color: green;
+          color: black;
+          font-size: 70px;
+          text-align: center;
+}
+</style>
+	</head>
+	<body>
+		<div class="grid">
+			<div id="head">HEADER</div>
+			<div id="sidea">SIDE</div>
+			<div id="sideb">SIDE</div>
+			<div id="main">MAIN</div>
+			<div id="foot">FOOT</div>
+		</div>
+		<p></p>
+	</body>
+</html>

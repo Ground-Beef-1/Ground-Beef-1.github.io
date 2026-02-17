@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dinosaur</title>
+<style>
+.grid {
+	display: grid;
+	height: 100vh;
+	grid:
+		'blank  blank  learn  igo  what  fame  search' 1fr
+	'dino  dino  dino  dino  dino  dino  dino' 8fr
+	/2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#blank {grid-area: blank;
+	background-color: #022c75;}
+#learn {grid-area: learn;
+	background-color: #022c75;
+	color: white;
+	font-size: 28px;
+	text-align: center;
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+}
+#igo {grid-area: igo;                                                       
+        background-color: #022c75;                                              
+        color: white;                                                           
+        text-align: center;
+	font-size: 28px;
+	font-family: sans-serif;
+	display: flex;
+        align-items: center;
+}
+#what {grid-area: what;                                                       
+        background-color: #022c75;                                              
+        color: white;                                                           
+        text-align: center;
+	font-size: 28px;
+	font-family: sans-serif;
+	display: flex;
+        align-items: center;
+}
+#fame {grid-area: fame;                                                       
+        background-color: #022c75;                                              
+        color: white;                                                           
+        text-align: center; 
+	font-size: 28px;
+	font-family: sans-serif;
+	display: flex;
+        align-items: center;
+}
+#search {grid-area: search;                                                    
+        background-color: #022c75;                                              
+        color: white;                                                           
+        text-align: center; 
+	font-size: 28px;
+	font-family: sans-serif;
+	display: flex;
+        align-items: center;
+}
+#dino {grid-area: dino;                                                       
+        background-color: #993333;               
+}
+#big {
+	color: #33ff33;
+	font-size:50px;
+	font-weight: bold;
+	padding-left: 80px;
+	background-color: #44038f;
+	display:inline;
+}
+.norm {
+	color: white;
+}
+</style>
+	</head>
+	<body>
+		<div class="grid">
+		<div id="blank"></div>
+		<div id="learn">Learn</div>
+		<div id="igo">Tickets</div>
+		<div id="what">What</div>
+		<div id="fame">Fame</div>
+		<div id="search">Search</div>
+		<div id="dino">
+			<p id="big">Dinosaur Museum</p>
+                        <p class="norm">Hours are 10am-10pm always</p>
+                        <p class="norm">We are located in your walls :)</p>
+		</div>
+		</div>
+			<p id="big">Dinosaur Museum</p>
+			<p class="norm">Hours are 10am-10pm always</p>
+			<p class="norm">We are located in your walls :)</p>
+	</body>
+</html>

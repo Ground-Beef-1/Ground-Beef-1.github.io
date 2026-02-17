@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Canvas</title>
+<style>
+canvas{
+	border: black 1px solid;
+}
+</style>
+	</head>
+	<body>
+		<h1>This is a canvas</h1>
+		<canvas id="canvas" width="800" height="800">
+		</canvas>
+		<script>
+
+		//MAGIC
+		const canvas = document.getElementById("canvas");
+		const ctx = canvas.getContext("2d");
+
+		//BG
+		ctx.fillStyle = "#8881d4";
+		ctx.fillRect(0,0,800,800);
+
+		//draw a green rectangle
+		ctx.fillStyle = "green";
+		ctx.fillRect(100,100,200,300);
+
+		ctx.fillStyle = "red";
+		ctx.fillRect(350,33,100,100);
+		
+		//Circle
+		ctx.fillStyle = "pink";
+		ctx.strokeStyle = "brown";
+		ctx.lineWidth = 10;
+		//Define shape first
+		ctx.beginPath();
+		ctx.arc(400,400,75,0,2*Math.PI);
+		//Fill shape next
+		ctx.fill();
+		ctx.stroke();
+
+		 ctx.fillStyle = "pink";
+                ctx.strokeStyle = "brown";
+                ctx.lineWidth = 10;
+                //Define shape first
+                ctx.beginPath();
+                ctx.arc(600,600,75,0,Math.PI);
+                //Fill shape next
+                ctx.fill();
+                ctx.stroke();
+
+		 ctx.fillStyle = "pink";
+                ctx.strokeStyle = "brown";
+                ctx.lineWidth = 10;
+                //Define shape first
+                ctx.beginPath();
+                ctx.arc(600,400,75,0,Math.PI/2);
+                //Fill shape next
+                ctx.stroke();
+                ctx.fill();
+		
+
+		 ctx.fillStyle = "pink";
+                ctx.strokeStyle = "brown";
+                ctx.lineWidth = 10;
+                //Define shape first
+                ctx.beginPath();
+                ctx.arc(100,400,75,Math.PI,2*Math.PI);
+                //Fill shape next
+                ctx.fill();
+                ctx.stroke();
+
+
+		//Oval or ellipse if ya fancy (I'm scared)
+		ctx.beginPath();
+		ctx.fillStyle = "purple";
+		ctx.ellipse(
+			252,700,//x,y of center
+			250,100, //x radius, y radius
+			0, //rotation (radians)
+			0, 2*Math.PI
+			);
+		ctx.fill();
+
+		 ctx.beginPath();
+                ctx.fillStyle = "violet";
+                ctx.ellipse(
+                        252,600,//x,y of center
+                        250,100, //x radius, y radius
+                        Math.PI/3, //rotation (radians)
+                        0, 2*Math.PI
+                        );
+                ctx.fill();
+
+		//Triangle
+		ctx.fillStyle = "orange";
+		ctx.beginPath();
+		ctx.moveTo(700,10);
+		ctx.lineTo(790,100);
+		ctx.lineTo(610,100);
+		ctx.lineTo(700,10);
+		ctx.fill();
+
+
+		</script>
+	</body>
+</html>
