@@ -8,18 +8,37 @@ let gameActive = true; //this variable is required.
 
 
 //Make one function for each location
+
+function StonePath() {
+	clear();
+	print("\nYou inspect the worn stone path, who placed these stones? Were there others in your own situation, or perhaps something else…?, you feel uneasy but that is probably from the absurdity of your situation, but what else is new here");
+	print("\n\t1-    Turn around and do something else, the vibes are off"   +  "\n\t2-   Continue down the path, this could be the way out!" + "\n\t3-   Inspect further, maybe there’s something under the stones?");
+	function processInput(input){
+		if (input.toLowerCase() === "1"){
+			Clearing();
+		}
+		else if (input.toLowerCase() === "2"){
+			StoneBend();
+		}
+		else if (input.toLowerCase() === "3"){
+			StoneInspect();
+		}
+	}
+	waitForInput(processInput);
+}
+
 function Clearing() {
     clear();
     print("\nYou wake up in a strange clearing devoid of life with nothing but the clothes on your back and a dead phone in your pocket. The clearing seems to be blocked off by a dense wall of trees other than a few possible pathways. You feel uneasy, hungry, and quite lost given you have no idea where this place could be or how you got here.");
     print("\nWhat will you do? Type the number associated with your choice" +
-        "\n\t1-   Give up, this clearing is your new home and the trees the harbingers of your fate" 
-	    + "\n\t2-   Inspect the far path with worn stone leading around a bend" + "\n\t3-    Inspect the beaten path to your left" + "\n\t4-    Inspect the clearing, there’s gotta be something, right?");
+        "\n\n\t1-   Give up, this clearing is your new home and the trees the harbingers of your fate" 
+	    + "\n\t2-   Inspect the far path with worn stone leading around a bend" + "\n\t3-   Inspect the beaten path to your left" + "\n\t4-   Inspect the clearing, there’s gotta be something, right?");
     
     function processInput(input){
         if (input.toLowerCase() === "1") {
             Quitter();
         } else if (input.toLowerCase() === "2"){
-            BeatenPath();
+            StonePath();
         }
 	  else if (input.toLowerCase() === "3"){
 		Unwitten();
