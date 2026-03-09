@@ -82,7 +82,58 @@ function Creature() {
 	}
 	waitForInput(processInput);
 }
-function NoStealth
+function NotSecondGrade() {
+	clear();
+	print("\nYou back up to get more of a speedy start and run as fast as you can, your legs burning, your heart pumping. You feel like the fastest person alive -no, the fastest being alive. You soon realize you are getting worn out already… You are relatively out of shape and it is no longer second grade… you collapse to the ground after a few more feet. The creature pauses, shocked that running ~40 feet already caused you to fully eat shit. But this shock does not last long and as you get up wiping dead leaves from your pants you look up and see those hollow eyes locked in with yours. You realize you are quite doomed as the creature stomps you into human paste. It does not bother to eat you -It does not want such weakness in its body.");
+	print("\n\tPress C to continue");
+
+	function processInput(input){
+		if (input.toLowerCase() === "c"){
+			NotSecondGrade2()
+		}
+	}
+	waitForInput(processInput);
+}
+function NotSecondGrade2() {
+	clear();
+	print("\nBAD ENDING: THIS IS NOT SECOND GRADE" + "\nWow, I’m honestly impressed that you are that bad at running. You do know that you aren’t supposed to collapse until you actually make it to your target. Right?" + "\n*mumbling: my grandfather could’ve run for longer and he’s 6 feet under*");
+	print("\nPress R to restart");
+
+	function processInput(input){
+		if (input.toLowerCase() === "r"){
+			start();
+		}
+	}
+	waitForInput(processInput);
+}
+
+
+function NoStealth() {
+	clear();
+	print("\nYou cover yourself in leaves and sticks feeling very stealthy. You recall a spy movie you have watched before where the main character did something like this, you feel like a real spy! This is great! You get halfway past the thing when you realize you forgot to mask your scent somehow, you pray the creature doesn’t notice…");
+	print("\nYou continue on and after a bit further you find the unsecured leaves are falling off and the creature becoming more alert by the second. You decide to just book it once it takes notice of you.");
+	print("\nUnfortunately you are no longer in second grade and the fastest runner, you are pretty slow and a bit out of shape, either way the creature already noticed you. The creature snaps you up and eats you. Sucks to suck.");
+	print("\n\tPress C to continue");
+
+	function processInput(input){
+		if (input.toLowerCase() === "c");{
+			NoStealth2()
+		}
+	}
+	waitForInput(processInput);
+}
+function NoStealth2() {
+	clear();
+	print("\nBAD ENDING: STEALTH LEVEL 0" + "\nYou really should have thought this through a bit more, huh?");
+	print("\n\tPress R to restart");
+
+	function processInput(input){
+		if (input.toLowerCase() === "r"){
+			start();
+		}
+	}
+	waitForInput(processInput);
+}
 
 function MisplacedTrust() {
 	clear();
@@ -104,7 +155,7 @@ function MisplacedTrust2() {
 
 	function processInput(input){
 		if (input.toLowerCase() === "r"){
-			Clearing();
+			start();
 		}
 	}
 	waitForInput(processInput);
@@ -187,7 +238,7 @@ function Quitter2() {
 
 	function processInput(input){
 		if (input.toLowerCase() === "r"){
-			Clearing();
+			start();
 		}
 	}
 	waitForInput(processInput);
@@ -200,6 +251,7 @@ function Quitter2() {
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
+	clear();
     print("Open your eyes. Enter to open your eyes.");
 
     function processInput(input){
