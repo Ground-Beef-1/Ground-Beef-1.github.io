@@ -89,6 +89,45 @@ function UseItem() {
 	}
 	waitForInput(processInput);
 }
+function PhoneToss() {
+	clear();
+	print("\nYou begin to throw your phone at the creature but you hesitate just before releasing it at the creature. You remember all the photos on it, all your memories. You have the very last photos of your dad when you were two, you have all your telescope images of your favorite stars to once again find your dad. You have your whole life in that device, the good times and the worst times. It is also quite expensive to replace and these days phones are important to employment.");
+	print("\nAre you sure you want to do this?");
+	print("\n\t1-   Yes" + "\n\t2-   I'd rather not actually");
+	function processInput(input){
+		if (input.toLowerCase() === "1"){
+			PhoneTossY();
+		}
+		else if (input.toLowerCase() === "2"){
+			PhoneTossN();
+		}
+	}
+	waitForInput(processInput);
+}
+
+function PhoneTossN() {
+	clear();
+	print("\nYou put your phone back into your pocket, probably for the best. Besides, maybe another plan would be better.");
+	print("\n\tPress B to go back");
+	function processInput(){
+		if (input.toLowerCase() === "b"){
+			UseItem();
+		}
+	}
+}
+
+function PhoneTossY() {
+	clear();
+	print("\nYou throw the phone, it lands near the creature who was distracted by an owl. The creature then turns around and unknowingly steps on your phone, completely destroying it. Your stomach drops when you realize you not only lost your whole life, but that it was for nothing.");
+	print("\n\tPress B to go back");
+
+	function processInput(){
+		if (input.toLowerCase() === "b"){
+			UseItem();
+		}
+	}
+	waitForInput(processInput);
+}
 
 function ShamefulVert() {
 	clear();
