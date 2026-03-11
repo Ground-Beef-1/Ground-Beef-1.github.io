@@ -1,6 +1,7 @@
 let gameActive = true; //this variable is required. 
                        //to stop the game, set it to false.
 let Jacket = false;
+let BendInspected = false;
 //Declare your other global variables here
 
 
@@ -44,16 +45,36 @@ function StoneInspect() {
 function StoneBend() {
 	clear();
 	print("\nYou continue on the path and reach a bend, beyond this you see nothing but more stone path and a guttural feeling to turn around and leave passes through you. You do not feel safe, but was any of this ever safe?");
-	print("\n\t1-    Inspect the place? If nothing else it might postpone what could happen if you continue" + "\n\t2-    Keep going, this could still be the way out" + "\n\t3-    Trust your gut and turn around, this path likely leads somewhere you don’t want to go");
+	print("\n\t1-    Inspect the place? If nothing else it might postpone what could happen if you continue");
+	print("\t2-    Keep going, this could still be the way out");
+	print("\t3-    Trust your gut and turn around, this path likely leads somewhere you don’t want to go");
 	function processInput(input){
 		if (input.toLowerCase() === "1"){
-			BendInspect();
+			if (BendInspected == true){
+				BendInspect2();
+			}
+			else if (BendInspected == false){
+				BendInspect();
+			}
 		}
 		else if (input.toLowerCase() === "2"){
 			Creature();
 		}
 		else if (input.toLowerCase() === "3"){
 			StonePath();
+		}
+	}
+	waitForInput(processInput);
+}
+
+function BendInspect2() {
+	clear();
+	print("\nWhat are you doing? You checked this place once already, there is nothing left, you got the jacket… What else do you want? If you are looking for peace, your fate has long since erased that possibility.");
+	print("\n\tPress B to go back");
+
+	function processInput(input){
+		if (input.toLowerCase() == "b"){
+			StoneBend();
 		}
 	}
 	waitForInput(processInput);
@@ -403,6 +424,8 @@ function BendInspect() {
 		}
 		else if (input.toLowerCase() === "x"){
 			Jacket = true;
+			BendInspected = true;
+			BendInspect();
 		}
 	}
 	waitForInput(processInput);
