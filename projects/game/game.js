@@ -415,13 +415,141 @@ function Clearing() {
             StonePath();
         }
 	  else if (input.toLowerCase() === "3"){
-		Unwitten();
+		BeatenPath();
 	  }
 	  else if (input.toLowerCase() === "4"){
 		Unwritten();
 	  }
     }
     waitForInput(processInput);
+}
+
+function BeatenPath() {
+	clear();
+	print("\nYou look over to the beaten path and see it goes for a long while, but it could be your escape. You almost feel drawn to it, as if you have been missing it for a long, long time. You look down the path once more and make a choice, but which will you make?");
+	print("\n\tPress W to walk down the path" + "\n\tPress B to return to the clearing");
+
+	function processInput(input){
+		if (input.toLowerCase() === "w"){
+			BeatenPath2();
+		}
+		else if (input.toLowerCase() === "b"){
+			Clearing();
+		}
+	}
+	waitForInput(processInput);
+}
+
+function BeatenPath2() {
+        clear();
+        print("\nYou are a bit down the path and you see a strange flowering tree. It is similar to a pine tree, but if it was shaved kinda like a poodle. The flowers near the top let out a sweet but musty scent, and the ones near the bottom have begun to bear bright green spiky fruit resembling a bug that you have yet to see. The path continues on, but will you?");
+        print("\n\tPress W to walk" + "\n\tPress B to go back");
+
+        function processInput(input){
+                if (input.toLowerCase() === "w"){
+                        BeatenPath3();
+                }
+                else if (input.toLowerCase() === "b"){
+                        Clearing();
+                }
+        }
+        waitForInput(processInput);
+}
+
+function BeatenPath3() {
+        clear();
+        print("\nYou have gotten further down the path and hear the wind through the leaves once more. (if w/o jacket. You get chilly, if only you had something to warm you up. Either way it is not that bad.)(If w/ jacket. You feel a chill in the wind, thankfully you have a warm jacket.). After a bit you find that the whooshing of the wind in the trees is beginning to sound familiar, you must be going crazy, which is less surprising to you than it should be, but maybe the insanity was already a long time coming. Maybe your mom was right, you always were destined to fail. The path goes on, will you?");
+        print("\n\tPress W to walk" + "\n\tPress B to go back");
+
+        function processInput(input){
+                if (input.toLowerCase() === "w"){
+                        BeatenPath4();
+                }
+                else if (input.toLowerCase() === "b"){
+                        Clearing();
+                }   
+        }     
+        waitForInput(processInput);
+}
+
+function BeatenPath4() {
+        clear();
+        print("\nYou press on and spot a tree that looks as old as time itself, it seems to have been a while since the branches bore leaves but deep inside you can see that the tree still lives. The branches leave the trunk above the canopy of the younger trees with knots all the way up. It is strange, you think to yourself, why you find that these knots seem to resemble eyes. There are similar trees further along. You feel watched, but the path goes further still, will you?");
+        print("\n\tPress W to walk" + "\n\tPress B to go back");
+
+        function processInput(input){
+                if (input.toLowerCase() === "w"){
+                        BeatenPath5();
+                }
+                else if (input.toLowerCase() === "b"){
+                        Clearing();
+                }   
+        }     
+        waitForInput(processInput);
+}
+
+function BeatenPath5() {
+        clear();
+        print("\nYou continue onward and see something move in the distance, but it is too far away to tell what it was. Was there anything there at all? You hope not, these are the woods and you are not trained on woods survival, beyond reality TV that is. If it was something, it could easily kill you, you are vulnerable, alone, and far too trusting. You feel thankful that whatever that was hasn’t approached you because dying was not on your roster for the evening. The path goes onward, will you?");
+        print("\n\tPress W to walk" + "\n\tPress B to go back");
+
+        function processInput(input){
+                if (input.toLowerCase() === "w"){
+                        BeatenPath6();
+                }
+                else if (input.toLowerCase() === "b"){
+                        Clearing();
+                }   
+        }     
+        waitForInput(processInput);
+}
+
+function BeatenPath6() {
+        clear();
+        print("\nAfter continuing on the path, a dense fog falls over you, you can barely see the trees next to you. You estimate you can see around 8 feet into the distance, but nothing more as the fog is far too dense. You feel particularly scared due to your lack of sight, anything quiet enough could sneak up on you at any angle. The movies were wrong, your senses aren’t heightened, the only things that have grown stronger are your fear and your heartbeat, but hey, at least it still beats. The path persists, will you?");
+        print("\n\tPress W to walk" + "\n\tPress B to go back");
+
+        function processInput(input){
+                if (input.toLowerCase() === "w"){
+                        BeatenPath7();
+                }
+                else if (input.toLowerCase() === "b"){
+                        Clearing();
+                }   
+        }     
+        waitForInput(processInput);
+}
+
+function BeatenPath7() {
+        clear();
+        print("\nAfter a while the fog lifts but your fears persist. You decide to take a rest, you have been walking for a while you think, but there is no true way to tell how long you have been walking as the twilight sky has yet to change. As you look up to the moonless sky you think it very strange that the sky has maintained its hue, it feels as if time has stopped for the sky, or maybe just for you. Or maybe you have not been here as long as you think, you are pretty out of shape. The path has yet to stop, but will you?");
+        print("\n\tPress W to walk" + "\n\tPress B to go back");
+
+        function processInput(input){
+                if (input.toLowerCase() === "w"){
+                        BeatenPath8();
+                }
+                else if (input.toLowerCase() === "b"){
+                        Clearing();
+                }   
+        }     
+        waitForInput(processInput);
+}
+
+function BeatenPath8() {
+        clear();
+        print("\nAs you trek onwards you pass by a freshwater stream, thankfully knowledge of what water is drinkable happens to be something you know quite well and is the only forest survival knowledge you have. You look into the flowing water and can tell that; A) The water is running which keeps bacteria growth at bay, and B) You ensured there were no dead animals upstream (there were none). You take a refreshing sip of the water and feel much less worn out. The path presses onward still, but will you follow?");
+        print("\n\tPress W to walk" + "\n\tPress B to go back");
+
+        function processInput(input){
+                if (input.toLowerCase() === "w"){
+                        BeatenPath2();
+                }
+                else if (input.toLowerCase() === "b"){
+                        Clearing();
+                }   
+        }     
+        waitForInput(processInput);
 }
 
 function Unwritten(){
