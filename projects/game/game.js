@@ -84,12 +84,23 @@ function UseItem() {
 	clear();
 	print("\nYou look through your items and come up with a plan or a few.");
 	print("\nWhat plan do you think is best?");
-	print("\n\t1-    Throw the cube at it, it is decently heavy and sharp. If you hit its head you might at least discombobulate/confuse it long enough to get to the path" + "\n\t2-    Use the jacket as some sort of invisibility cloak, it seems to be made of leather which is animal skin so maybe it will just think you are an animal passing by, surely this logic lacks any flaw" + "\n\t3-   Maybe it just wants the key, toss it over then hide so either way it won’t see you" + "\n\t4-   Okay, the plan is you run behind the creature and jump to put the backpack over its head to blind it long enough to get past!" + "\n\t5-   This stick looks sharp enough to spear it through the head, if you have good aim you might be able to take it down and escape!" + "\n\t6-   You have a phone… maybe throw it or something?" + "\n\t7-   You decide that you don't want to use an item, maybe something else…");
+	print("\n\t1-   Throw the cube at it, it is decently heavy and sharp. If you hit its head you might at least"+"\n             discombobulate/confuse it long enough to get to the path");
+	if (Jacket == true){
+		print("\t2-   Use the jacket as some sort of invisibility cloak, it seems to be made of leather which is animal skin "+"\n             so maybe it will just think you are an animal passing by, surely this logic lacks any flaw");
+	}
+	else if (Jacket == false){
+		print("\t2-   Unavailable");
+	}
+	print("\t3-   Maybe it just wants the key, toss it over then hide so either way it won’t see you");
+	print("\t4-   Okay, the plan is you run behind the creature and jump to put the backpack over its head to blind it "+"\n             long enough to get past!");
+	print("\t5-   This stick looks sharp enough to spear it through the head, if you have good aim you might be able to "+"\n             take it down and escape!");
+	print("\t6-   You have a phone… maybe throw it or something?");
+	print("\n\t7-   You decide that you don't want to use an item, maybe something else…");
 	function processInput(input){
 		if (input.toLowerCase() === "1"){
 			Thunk();
 		}
-		else if (input.toLowerCase() === "2"){
+		else if (Jacket == true && input.toLowerCase() === "2"){
 			DeadMansJacket();
 		}
 		else if (input.toLowerCase() === "3"){
@@ -307,7 +318,7 @@ function ViolentEnding5() {
 function Creature() {
 	clear();
 	print("\nYou continue down the path and see something you have never seen before. At first through the fog you see a lean, animalistic beast-like shape that looks like it is made of what you deeply desire and what you most fear." + "\nAs you approach closer and the creature itself becomes visible it reveals that it is much more physical, much more real if that makes any sense. It looks like a grotesque twisting of deer and dog with extrusions only describable as broken bones fashioned into sharp sabres, it looks painful but you see no trace of such feeling in its bright, hollow eyes. You see nothing but a reflection of your own soul but somehow you can tell it still can’t see you, but it likely will soon. But as scary this thing may seem, you catch a glimpse of a possible way out, this could be your only shot to escape.");
-	print("\n\t1-    Maybe it is a nice dog-beast-deer-monstrosity creature, you could be the next disney princess with your eldritch looking companion! You want to approach it and let it sniff your hand." + "\n\n\t2-    NOPE NOPE ALL THE WAY NOPE! Get me out of here, we are turning around and finding another way" + "\n\n\t3-    Cover yourself in leaves and twigs to sneak past it, if you move slowly and methodically it might not see you." + "\n\n\t4-    If you run fast enough you might just be able to get by, It’s better than nothing at least, besides, you were the fastest runner in second grade, you probably still have it in you!" + "\n\n\t5-    Use an item you have collected");
+	print("\n\t1-    Maybe it is a nice dog-beast-deer-monstrosity creature, you could be the next disney princess with "+"\n              your eldritch looking companion! You want to approach it and let it sniff your hand." + "\n\n\t2-    NOPE NOPE ALL THE WAY NOPE! Get me out of here, we are turning around and finding another way" + "\n\n\t3-    Cover yourself in leaves and twigs to sneak past it, if you move slowly and methodically it might not "+"\n              see you." + "\n\n\t4-    If you run fast enough you might just be able to get by, It’s better than nothing at least, besides, "+"\n              you were the fastest runner in second grade, you probably still have it in you!" + "\n\n\t5-    Use an item you have collected");
 	function processInput(input){
 		if (input.toLowerCase() === "1"){
 			MisplacedTrust();
