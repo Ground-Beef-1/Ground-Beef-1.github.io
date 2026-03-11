@@ -1,6 +1,6 @@
 let gameActive = true; //this variable is required. 
                        //to stop the game, set it to false.
-
+let Jacket = false;
 //Declare your other global variables here
 
 
@@ -393,9 +393,16 @@ function BendInspect() {
 	print("\nIt is very comfortable and soft on the inside, strangely you feel both protected and strengthened, and you look pretty cool.");
 	print("\n\tPress B to go back");
 
+	if (Jacket == false) {
+		print("\n\tPress X to collect jacket");
+	}
+
 	function processInput(input){
 		if (input.toLowerCase() === "b"){
 			StoneBend();
+		}
+		else if (input.toLowerCase() === "x"){
+			Jacket = true;
 		}
 	}
 	waitForInput(processInput);

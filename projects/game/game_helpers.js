@@ -33,8 +33,9 @@ function clear() {
 // Don't worry too much yet about how it works. Just know
 // that when you press the enter key, it grabs what you typed
 // and passes it to a function called `handleInput`
-document.getElementById('user-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter' && gameActive) {
+document.getElementById('user-input').addEventListener('keyup', function(e) {
+    console.log("received key! " + this.value);
+    if (gameActive) {
         const input = this.value.trim();
         this.value = '';
         print('> ' + input);
