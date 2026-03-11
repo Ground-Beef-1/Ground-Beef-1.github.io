@@ -558,8 +558,8 @@ function Unwritten(){
 	print("\n\tPress R to restart");
 
 	function processInput(input){
-		if (input.toLowarCase() === "r"){
-			Clearing();
+		if (input.toLowerCase() === "r"){
+			start();
 		}
 	}
 	waitForInput(processInput);
