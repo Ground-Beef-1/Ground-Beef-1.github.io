@@ -9,6 +9,7 @@ let ClearInspected = false;
 let Key = false;
 let Backpack = false;
 let CubePaths = false;
+let AteKey = false;
 //Declare your other global variables here
 
 
@@ -90,7 +91,12 @@ function UseItem() {
 	clear();
 	print("\nYou look through your items and come up with a plan or a few.");
 	print("\nWhat plan do you think is best?");
-	print("\n\t1-   Throw the cube at it, it is decently heavy and sharp. If you hit its head you might at least"+"\n             discombobulate/confuse it long enough to get to the path");
+	if (Cube == true){
+		print("\n\t1-   Throw the cube at it, it is decently heavy and sharp. If you hit its head you might at least"+"\n             discombobulate/confuse it long enough to get to the path");
+	}
+	else if (Cube == false){
+		print("\n\t1-   Unavailable");
+	}
 	if (Jacket == true){
 		print("\t2-   Use the jacket as some sort of invisibility cloak, it seems to be made of leather which is animal skin "+"\n             so maybe it will just think you are an animal passing by, surely this logic lacks any flaw");
 	}
@@ -109,13 +115,13 @@ function UseItem() {
 
 	print("\n\t7-   You decide that you don't want to use an item, maybe something else…");
 	function processInput(input){
-		if (input.toLowerCase() === "1"){
+		if (Cube == true && input.toLowerCase() === "1"){
 			Thunk();
 		}
 		else if (Jacket == true && input.toLowerCase() === "2"){
 			DeadMansJacket();
 		}
-		else if (input.toLowerCase() === "3"){
+		else if ((Key == true || AteKey == false) && input.toLowerCase() === "3"){
 			KeyToss();
 		}
 		else if (input.toLowerCase() === "4"){
@@ -210,6 +216,8 @@ function KeyToss() {
 	//and adds itself
 	function processInput(input){
 		if (input.toLowerCase() === "b"){
+			Key = false;
+			AteKey = true;
 			UseItem();
 		}
 	}
@@ -751,6 +759,7 @@ function start(){
 	Key = false;
 	Backpack = false;
 	CubePaths = false;
+	AteKey = false;
 	clear();
     print("Open your eyes. Enter to open your eyes.");
 
