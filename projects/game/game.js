@@ -2,14 +2,20 @@ let gameActive = true; //this variable is required.
                        //to stop the game, set it to false.
 let Jacket = false;
 let BendInspected = false;
+let Phone = true;
+let Cube = false;
+let ClearInspectV = false;
+let ClearInspected = false;
+let Key = false;
+let Backpack = false;
+let CubePaths = false;
 //Declare your other global variables here
 
 
 //If you need, add any "helper" functions here
 
 
-//Make one function for each location
-
+//Make one function for each location:w
 
 
 function StonePath() {
@@ -94,7 +100,13 @@ function UseItem() {
 	print("\t3-   Maybe it just wants the key, toss it over then hide so either way it won’t see you");
 	print("\t4-   Okay, the plan is you run behind the creature and jump to put the backpack over its head to blind it "+"\n             long enough to get past!");
 	print("\t5-   This stick looks sharp enough to spear it through the head, if you have good aim you might be able to "+"\n             take it down and escape!");
-	print("\t6-   You have a phone… maybe throw it or something?");
+	if (Phone == true){
+		print("\t6-   You have a phone… maybe throw it or something?");
+	}
+	else if (Phone == false){
+		print("Your phone is too close to the creature and is mutilated beyond repair");
+	}
+
 	print("\n\t7-   You decide that you don't want to use an item, maybe something else…");
 	function processInput(input){
 		if (input.toLowerCase() === "1"){
@@ -112,7 +124,7 @@ function UseItem() {
 		else if (input.toLowerCase() === "5"){
 			ViolentEnding();
 		}
-		else if (input.toLowerCase() === "6"){
+		else if (Phone == true && input.toLowerCase() === "6"){
 			PhoneToss();
 		}
 		else if (input.toLowerCase() === "7"){
@@ -155,6 +167,7 @@ function PhoneTossY() {
 
 	function processInput(){
 		if (input.toLowerCase() === "b"){
+			Phone = false;
 			UseItem();
 		}
 	}
@@ -447,22 +460,105 @@ function Clearing() {
     print("\nYou wake up in a strange clearing devoid of life with nothing but the clothes on your back and a dead phone in your pocket. The clearing seems to be blocked off by a dense wall of trees other than a few possible pathways. You feel uneasy, hungry, and quite lost given you have no idea where this place could be or how you got here.");
     print("\nWhat will you do? Type the number associated with your choice" +
         "\n\n\t1-   Give up, this clearing is your new home and the trees the harbingers of your fate" 
-	    + "\n\t2-   Inspect the far path with worn stone leading around a bend" + "\n\t3-   Inspect the beaten path to your left" + "\n\t4-   Inspect the clearing, there’s gotta be something, right?");
+	    + "\n\t2-   Inspect the far path with worn stone leading around a bend" + "\n\t3-   Inspect the beaten path to your left");
+	if (ClearInspectV == false){
+		print("\n\t4-   Inspect the clearing, there’s gotta be something, right?");
+	}
+	if (Cube == false && ClearInspect == true){
+		print("\n\t5-   Inspect the shiny thing to your right");
+	}
+	if (Backpack == false && ClearInspect == true){
+		print("\n\t6-   Inspect the object from behind the bush");
+	}
     
     function processInput(input){
         if (input.toLowerCase() === "1") {
             Quitter();
-        } else if (input.toLowerCase() === "2"){
-            StonePath();
+        } 
+	else if (input.toLowerCase() === "2"){
+                StonePath();
         }
-	  else if (input.toLowerCase() === "3"){
+	else if (input.toLowerCase() === "3"){
 		BeatenPath();
-	  }
-	  else if (input.toLowerCase() === "4"){
-		Unwritten();
-	  }
-    }
-    waitForInput(processInput);
+	}
+	else if (input.toLowerCase() === "4"){
+		if (ClearInspectV == false){
+			ClearInspect();
+		}
+		else if (ClearInspectV == true){
+			ClearInspect2();
+		}
+		else if (ClearInspected == true){
+			ClearInspect3();
+		}
+	}
+	  else if (Cube == false && ClearInspectV == true && input.toLowerCase === "5"){
+		CubeInspect();
+	    }
+	    else if (Backpack == false && Key == false && ClearInspectV == true && input.toLowerCase === "6"){
+		BushInspect();
+	    }
+      }
+      waitForInput(processInput);
+}
+
+function BushInspect(){
+	clear();
+	print("\nYou tentatively step toward the bush and reach behind, hoping you won’t find the bite of teeth. You feel something made of fabric and, when you pull it you see it is a backpack, it is large and good quality. You open it and shake it out, you find quite a few items but the only ones that seem to be of use look to be the backpack itself and a metal key. What will you take?");
+	print("\n\t Press B to go back");
+
+	if (Backpack == false){
+		print("\n\tPress X to collect backpack");
+	}
+	if (Key == false){
+		Print("\n\tPress K to collect key");
+	}
+	function processInput(input){
+		if (input.toLowerCase() === "b"){
+			Clearing();
+		}
+		else if (Backpack == false && input.toLowerCase === "x"){
+			Backpack == true;
+			BushInspect();
+		}
+		else if (Key == false && input.toLowerCase === "k"){
+			Key == true;
+			BushInspect();
+		}
+	}
+	waitForInput(processInput);
+}
+
+function CubeInspect() {
+	clear();
+	Cube = true;
+	CubePaths = true;
+	Unwritten();
+}
+
+function ClearInspect3() {
+	clear();
+	Unwritten();
+}
+
+function ClearInspect2() {
+	clear();
+	ClearInspected = true;
+	Unwritten();
+}
+
+function ClearInspect(){
+	clear();
+	print("\nYou inspect the clearing and find a few new things, you find a path, though it is blocked by thorns. If you want to continue on it, maybe you can get past them. Behind you there is a bush with a strange dark object hidden behind it, maybe you could figure out what it is? And something shiny caught your eye to your right, but it is covered in leaves. Other than these items and the path you can’t see anything more right now, will this even be enough to get out?");
+	print("\n\tPress O to go to options");
+
+	function processInput(input){
+		if (input.toLowerCase() === "o"){
+			ClearInspect = true;
+			Clearing();
+		}
+	}
+	waitForInput(processInput);
 }
 
 function BeatenPath() {
@@ -600,7 +696,7 @@ function Unwritten(){
 
 	function processInput(input){
 		if (input.toLowerCase() === "r"){
-			start();
+			Clearing();
 		}
 	}
 	waitForInput(processInput);
@@ -646,6 +742,15 @@ function Quitter2() {
 //very start. For this simple example, any input will bring you
 //to locationA
 function start(){
+	Jacket = false;
+	BendInspected = false;
+	Phone = true;
+	Cube = false;
+	ClearInspectV = false;
+	ClearInspected = false;
+	Key = false;
+	Backpack = false;
+	CubePaths = false;
 	clear();
     print("Open your eyes. Enter to open your eyes.");
 
