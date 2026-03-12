@@ -103,8 +103,20 @@ function UseItem() {
 	else if (Jacket == false){
 		print("\t2-   Unavailable");
 	}
-	print("\t3-   Maybe it just wants the key, toss it over then hide so either way it won’t see you");
-	print("\t4-   Okay, the plan is you run behind the creature and jump to put the backpack over its head to blind it "+"\n             long enough to get past!");
+	if (Key == true){
+		print("\t3-   Maybe it just wants the key, toss it over then hide so either way it won’t see you");
+	}
+	else if (key == false){
+		print("\n\tunavailable");
+	}
+
+	if (Backpack == true){
+		print("\t4-   Okay, the plan is you run behind the creature and jump to put the backpack over its head to blind it "+"\n             long enough to get past!");
+	}
+	else if (Backpack == false){
+		print("\n\tUnavailable");
+	}
+
 	print("\t5-   This stick looks sharp enough to spear it through the head, if you have good aim you might be able to "+"\n             take it down and escape!");
 	if (Phone == true){
 		print("\t6-   You have a phone… maybe throw it or something?");
@@ -469,13 +481,11 @@ function Clearing() {
     print("\nWhat will you do? Type the number associated with your choice" +
         "\n\n\t1-   Give up, this clearing is your new home and the trees the harbingers of your fate" 
 	    + "\n\t2-   Inspect the far path with worn stone leading around a bend" + "\n\t3-   Inspect the beaten path to your left");
-	if (ClearInspectV == false){
-		print("\n\t4-   Inspect the clearing, there’s gotta be something, right?");
-	}
-	if (Cube == false && ClearInspect == true){
+		print("\t4-   Inspect the clearing, there’s gotta be something, right?");
+	if (Cube == false && ClearInspectV == true){
 		print("\n\t5-   Inspect the shiny thing to your right");
 	}
-	if (Backpack == false && ClearInspect == true){
+	if (Backpack == false && ClearInspectV == true){
 		print("\n\t6-   Inspect the object from behind the bush");
 	}
     
@@ -500,7 +510,8 @@ function Clearing() {
 			ClearInspect3();
 		}
 	}
-	  else if (Cube == false && ClearInspectV == true && input.toLowerCase === "5"){
+	else if (//Cube == false && ClearInspectV == true && 
+		input.toLowerCase === "5"){
 		CubeInspect();
 	    }
 	    else if (Backpack == false && Key == false && ClearInspectV == true && input.toLowerCase === "6"){
@@ -562,7 +573,7 @@ function ClearInspect(){
 
 	function processInput(input){
 		if (input.toLowerCase() === "o"){
-			ClearInspect = true;
+			ClearInspectV = true;
 			Clearing();
 		}
 	}
