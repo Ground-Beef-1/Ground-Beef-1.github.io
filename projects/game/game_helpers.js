@@ -7,6 +7,15 @@ function print(text) {
     output.appendChild(line);
     output.scrollTop = output.scrollHeight;
 }
+/*
+function Pick1(text, click) {
+    const output = document.getElementById('output')         
+    const line = document.createElement('div');                                 
+    line.innerHTML = "<buttonnonclick="click()">" + text + "</button>"; 
+    output.appendChild(line);                                                   
+    output.scrollTop = output.scrollHeight;
+}
+*/
 
 //this formats text inside a pre tag.
 //it just makes sure that HTML doesn't mess with spacing

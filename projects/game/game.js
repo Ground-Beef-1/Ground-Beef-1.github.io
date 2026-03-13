@@ -496,8 +496,7 @@ function Clearing() {
 		print("\n\t7-   Maybe you can use the jacket to shield yourself through the thorns, it might get scratched up but it seems thick enough to save you from pain");
 	}
 
-    
-    function processInput(input){
+ function processInput(input){
         if (input.toLowerCase() === "1") {
             Quitter();
         }
@@ -530,14 +529,21 @@ function Clearing() {
 	    else if (Key == true && Backpack == false && ClearInspectV == true && input.toLowerCase() === "6"){
 		BushInspect();
 	    }
-	    else if (Jacket == false && ClearInspectV == true && input.toLowerCase() === "7"){
+	    else if (Jacket == false && Damaged == false && ClearInspectV == true && input.toLowerCase() === "7"){
 		NoJacketThorns();
 	    }
 	    else if (Jacket == true && ClearInspectV == true && input.toLowerCase() === "7"){
 		JacketThorns();
 	    }
+	    else if (Jacket == false && Damaged == true && ClearInspectV == true && input.toLowerCase() === "7"){
+		DamagedThorns();
+	    }
       }
       waitForInput(processInput);
+}
+
+function JacketThorns() {
+	clear();
 }
 
 function NoJacketThorns() {
@@ -549,9 +555,10 @@ function NoJacketThorns() {
 
 	function processInput(input){
 		if (input.toLowerCase() === o){
-			Unwritten();
+			Clearing();
 		}
 	}
+	waitForInput(processInput);
 }
 
 function BushInspect(){
