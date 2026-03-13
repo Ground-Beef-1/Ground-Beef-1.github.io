@@ -10,6 +10,7 @@ let Key = false;
 let Backpack = false;
 let CubePaths = false;
 let AteKey = false;
+let Damaged = false;
 //Declare your other global variables here
 
 
@@ -485,14 +486,21 @@ function Clearing() {
 	if (Cube == false && ClearInspectV == true){
 		print("\n\t5-   Inspect the shiny thing to your right");
 	}
-	if (Backpack == false && ClearInspectV == true){
+	if ((Backpack == false || Key == false) && ClearInspectV == true){
 		print("\n\t6-   Inspect the object from behind the bush");
 	}
+	if (Jacket == false && Damaged == false){
+		print("\n\t7-    Maybe you can just push through the thorns, people can survive much worse");
+	}
+	if (jacket == true){
+		print("\n\t7-   Maybe you can use the jacket to shield yourself through the thorns, it might get scratched up but it seems thick enough to save you from pain");
+	}
+
     
     function processInput(input){
         if (input.toLowerCase() === "1") {
             Quitter();
-        } 
+        }
 	else if (input.toLowerCase() === "2"){
                 StonePath();
         }
@@ -510,15 +518,40 @@ function Clearing() {
 			ClearInspect3();
 		}
 	}
-	else if (//Cube == false && ClearInspectV == true && 
-		input.toLowerCase === "5"){
+	else if (input.toLowerCase() === "5"){
 		CubeInspect();
 	    }
-	    else if (Backpack == false && Key == false && ClearInspectV == true && input.toLowerCase === "6"){
+	    else if (Backpack == false && Key == false && ClearInspectV == true && input.toLowerCase() === "6"){
 		BushInspect();
+	    }
+	    else if (Key == false && Backpack == true && ClearInspectV == true && input.toLowerCase() === "6"){
+		BushInspect();
+	    }
+	    else if (Key == true && Backpack == false && ClearInspectV == true && input.toLowerCase() === "6"){
+		BushInspect();
+	    }
+	    else if (Jacket == false && ClearInspectV == true && input.toLowerCase() === "7"){
+		NoJacketThorns();
+	    }
+	    else if (Jacket == true && ClearInspectV == true && input.toLowerCase() === "7"){
+		JacketThorns();
 	    }
       }
       waitForInput(processInput);
+}
+
+function NoJacketThorns() {
+	clear();
+	print("\nYou start to crawl through the sharp thorns, the unforgiving barbs tearing at your skin and clothes, you feel an amount of pain that you feel is disproportionate to simple thorns. This feels like thousands of knives are ruthlessly being dragged across your skin, you are only a few feet in and are already bleeding from unreasonably deep cuts, you still can’t see the end of the thorns so you decide to turn around and once you are out you can fully assess the damage.");
+	print("\n\tPress O to return to options");
+
+	Damaged = true;
+
+	function processInput(input){
+		if (input.toLowerCase() === o){
+			Unwritten();
+		}
+	}
 }
 
 function BushInspect(){
@@ -529,19 +562,24 @@ function BushInspect(){
 	if (Backpack == false){
 		print("\n\tPress X to collect backpack");
 	}
-	if (Key == false){
-		Print("\n\tPress K to collect key");
+	else if (Backpack == true){
+		print("\n ");
 	}
+
+	if (Key == false){
+		print("\n\tPress K to collect key");
+	}
+
 	function processInput(input){
 		if (input.toLowerCase() === "b"){
 			Clearing();
 		}
-		else if (Backpack == false && input.toLowerCase === "x"){
-			Backpack == true;
+		else if (Backpack == false && input.toLowerCase() === "x"){
+			Backpack = true;
 			BushInspect();
 		}
-		else if (Key == false && input.toLowerCase === "k"){
-			Key == true;
+		else if (Key == false && input.toLowerCase() === "k"){
+			Key = true;
 			BushInspect();
 		}
 	}
@@ -771,6 +809,7 @@ function start(){
 	Backpack = false;
 	CubePaths = false;
 	AteKey = false;
+	Damaged = false;
 	clear();
     print("Open your eyes. Enter to open your eyes.");
 
