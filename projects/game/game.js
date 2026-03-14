@@ -11,6 +11,7 @@ let Backpack = false;
 let CubePaths = false;
 let AteKey = false;
 let Damaged = false;
+let Stick = false;
 //Declare your other global variables here
 
 
@@ -117,13 +118,18 @@ function UseItem() {
 	else if (Backpack == false){
 		print("\n\tUnavailable");
 	}
-
+	if (Stick == true){
 	print("\t5-   This stick looks sharp enough to spear it through the head, if you have good aim you might be able to "+"\n             take it down and escape!");
+	}
+	else if (Stick == false){
+		print("\n\tUnavailable");
+	}
+
 	if (Phone == true){
 		print("\t6-   You have a phone… maybe throw it or something?");
 	}
 	else if (Phone == false){
-		print("Your phone is too close to the creature and is mutilated beyond repair");
+		print("\n\tYour phone is too close to the creature and is mutilated beyond repair");
 	}
 
 	print("\n\t7-   You decide that you don't want to use an item, maybe something else…");
@@ -137,10 +143,10 @@ function UseItem() {
 		else if ((Key == true || AteKey == false) && input.toLowerCase() === "3"){
 			KeyToss();
 		}
-		else if (input.toLowerCase() === "4"){
+		else if (Backpack == true && input.toLowerCase() === "4"){
 			ShamefulVert();
 		}
-		else if (input.toLowerCase() === "5"){
+		else if (Stick == true && input.toLowerCase() === "5"){
 			ViolentEnding();
 		}
 		else if (Phone == true && input.toLowerCase() === "6"){
@@ -544,6 +550,22 @@ function Clearing() {
 
 function JacketThorns() {
 	clear();
+	print("\nYou hunker down and start crawling through, you hear the thorns scraping on the jacket, some even managing to tear it. You fear what might happen if they manage to tear through. The leather may be strong but it seems as though the thorns are stronger than they should be. You continue to crawl making sure to keep the jacket covering as much of you as possible. At long last you reach a clearing and find nothing but a stick. It is thick, heavy, and strong, it also seems to have been sharpened previously. Either way, this is a good stick, do you want it?");
+	print("\n\tPress B to go back");
+	if (Stick == false){
+		print("\n\tPress X to take the stick");
+	}
+
+	function processInput(input){
+		if (input.toLowerCase() === "b"){
+			Clearing();
+		}
+		else if (Stick == false && input.toLowerCase() === "x"){
+			Stick = true;
+			JacketThorns();
+		}
+	}
+	waitForInput(processInput);
 }
 
 function NoJacketThorns() {
@@ -817,6 +839,7 @@ function start(){
 	CubePaths = false;
 	AteKey = false;
 	Damaged = false;
+	Stick = false;
 	clear();
     print("Open your eyes. Enter to open your eyes.");
 
