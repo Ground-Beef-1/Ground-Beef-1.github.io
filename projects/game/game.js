@@ -495,11 +495,14 @@ function Clearing() {
 	if ((Backpack == false || Key == false) && ClearInspectV == true){
 		print("\n\t6-   Inspect the object from behind the bush");
 	}
-	if (Jacket == false && Damaged == false){
+	if (Jacket == false && Damaged == false && ClearInspectV == true){
 		print("\n\t7-    Maybe you can just push through the thorns, people can survive much worse");
 	}
-	if (jacket == true){
-		print("\n\t7-   Maybe you can use the jacket to shield yourself through the thorns, it might get scratched up but it seems thick enough to save you from pain");
+	if (Jacket == true && ClearInspectV == true){
+		print("\n\t7-   Maybe you can use the jacket to shield yourself through the thorns, it " + "\n             might get scratched up but it seems thick enough to save you from pain");
+	}
+	if (Damaged == true && ClearInspectV == true && Jacket == false){
+		print("Going back through that hell of a path again is not something you want to do right now, maybe you will reconsider if you have some sort of protection from those vile barbs");
 	}
 
  function processInput(input){
@@ -576,7 +579,7 @@ function NoJacketThorns() {
 	Damaged = true;
 
 	function processInput(input){
-		if (input.toLowerCase() === o){
+		if (input.toLowerCase() === "o"){
 			Clearing();
 		}
 	}
