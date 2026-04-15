@@ -10,10 +10,81 @@ body{background-color: #000000;
 body {
 	overflow: overlay;
 }
-
-#about{
+#game{
+	height: 200px;
 	background-color: black;
 }
+#pic1{
+	grid-area: pic1;
+}
+
+#about{
+	padding-top:40px;
+	background-color: blue;
+	background-image: linear-gradient(to bottom, #212127, #000011);
+	display: grid;
+	height: 100vh;
+	grid:
+	'boths auth1 auth2'1fr
+	'text pic1 pic2'2fr
+	'text blrb1 blrb2'3fr
+	/2fr 1fr 1fr;
+}
+#beef{
+	grid-area: auth1;
+	font-size: 40px;
+	display: flex;
+	color: white;
+	justify-content: center;
+	padding-top: 80px;
+}
+#hive{
+	grid-area: auth2;                                              
+        font-size: 40px;                                               
+        display: flex;                                                   
+        color: white;                                                     
+        justify-content: center;                                  
+        padding-top: 80px;
+}
+#pic1{
+	margin-top: 20px;
+	margin-left: 15px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 3px dashed white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Comic Sans MS", "Comic Sans";
+	font-size: 30px;
+	color: white;
+}
+#pic2{
+	grid-area: pic2;
+	margin-top: 20px;                                                       
+        margin-left: 20px;                                                      
+        margin-right: 10px;                                                     
+        margin-bottom: 10px;                                                    
+        border: 3px dashed white;                                               
+        display: flex;                                                          
+        align-items: center;                                                    
+        justify-content: center;                                                
+        font-family: "Comic Sans MS", "Comic Sans";                             
+        font-size: 30px;  
+        color: white;
+}
+
+#both{
+	grid-area: boths;
+	font-size: 60px;
+	font-family: Sans;
+	display: flex;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 3px solid white;
+}
+
 #works{
 	color:white;
 }
@@ -66,14 +137,6 @@ body {
 	text-align: center;
 	padding: 18px 16px;
 	text-decoration: none;
-}
-.noscroll::-webkit-scrollbar {
-    display: none;
-}
-
-.noscroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;  
 }
 
 .dropdown{
@@ -152,7 +215,7 @@ border-image: conic-gradient(#FF00AA, #FFA902, #AAFF02, #05AAFF, #AA01FF);
         background-image: linear-gradient(to bottom,#000011, #212127)
 }
 #otworks{
-	padding-right:40px;
+	padding-right:90px;
 }
 
 
@@ -189,15 +252,23 @@ border-image: conic-gradient(#FF00AA, #FFA902, #AAFF02, #05AAFF, #AA01FF);
 		<div class="colorline"></div>
 	</div>
 </div>
-<a href="#works" class="link">About</a>
+<a href="#about" class="link">About</a>
 		</ul>
 	</div>
 <div id="hero"></div>
 	</div>
 	</div>
-<div id="about">
-	<h1 id="works"><a target="_blank" id="gamelink" href="projects/game/index.html">My game</a><h1>
 </div>
+<div id="about">
+	<div id="both">About us</div>
+	<div id="beef">Ground Beef</div>
+	<div id="pic1">image here</div>
+	<div id="hive"> The Hivemind</div>
+	<div id="pic2">image here</div>
+
+</div>
+<div id="game">
+<h1 id="works"><a target="_blank" id="gamelink" href="projects/game/index.html">My game</a><h1>
 </div>
 </body>
 </html>
