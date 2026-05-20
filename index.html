@@ -159,14 +159,18 @@ body {
 	background-color: blue;
 }
 
-.dropdown-content {
+.dropdown-background{
+	min-width: 160px;
 	display: none;
 	position: fixed;
-	min-width: 160px;
-	overflow: auto;
-	border: 10px solid transparent;
-border-image: conic-gradient(#FF00AA, #FFA902, #AAFF02, #05AAFF, #AA01FF);
+	background-image: conic-gradient(#FF00AA, #FFA902, #AAFF02, #05AAFF, #AA01FF);
 	box-shadow: 0px 8px 16px #6902db;
+}
+
+.dropdown-content {
+	width: 90%;
+	margin: 10px;
+	overflow: auto;
 	z-index: 3;
 }
 
@@ -188,7 +192,7 @@ border-image: conic-gradient(#FF00AA, #FFA902, #AAFF02, #05AAFF, #AA01FF);
 	color: white;
 }
 
-.dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-background{
 	display: block;
 }
 .dropdown-content .colorline{
@@ -244,12 +248,14 @@ border-image: conic-gradient(#FF00AA, #FFA902, #AAFF02, #05AAFF, #AA01FF);
 	<i class="arrow down"></i>
 	</button>
 	<div id="topborder"></div> 
-	<div class="dropdown-content">
-		<div class="colorline"></div>
-		<a class="aboutc" href="#works">About Our Comic</a>
-		<div class="colorline"></div>
-		<a class="sheets" href="#works">Character Sheets</a>
-		<div class="colorline"></div>
+	<div class="dropdown-background">
+		<div class="dropdown-content">
+			<div class="colorline"></div>
+			<a class="aboutc" href="#works">About Our Comic</a>
+			<div class="colorline"></div>
+			<a class="sheets" href="#works">Character Sheets</a>
+			<div class="colorline"></div>
+		</div>
 	</div>
 </div>
 <a href="#about" class="link">About</a>
